@@ -14,7 +14,7 @@ export function LoginPage (){
 
             <div class="login">
                 <div>
-                    <img class="fondo" src="/img/fondo-login.jpg" alt="fondo" />
+                    <img class="fondo" src="/img/fondo-login.jpg" alt="fondo" />     
                 </div>
             </div>
         </div>
