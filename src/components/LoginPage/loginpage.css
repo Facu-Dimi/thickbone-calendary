@@ -60,3 +60,32 @@ body{
     height: 725px;
 }
 
+@media (min-height: 773px) and (min-width: 1600px){
+
+
+    .logos-login{
+        width: 690px;
+        height: 900px;
+
+
+    }
+
+
+    .logos{
+        margin-top: 50px;
+        margin-left: 85px;
+    }
+
+
+    .race{
+        margin-left: 90px;
+    }
+
+
+    .fondo{
+        width: 900px;
+        height: 900px;
+    }
+}
+
+
