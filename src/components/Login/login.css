@@ -1,19 +1,71 @@
 .log-div{
-    background-color: #5A5A5A;
+    background-color: #1A1A1A;
     opacity: 2;
-    width: 200px;
-    height: 200px;
+    width: 360px;
+    height: 400px;
+    opacity: 0.8;
+    display: block;
+    border-radius: 1.1rem;
+    
+
 
 }
 
+.inputs{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
 input{
-    margin: 10px;
+    margin: 15px;
+
 }
 
 
 .buttons{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
+
+#clave, #mail {
+    padding-right: 18px;
+    margin-right: 10px;
+
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #FFFF;
+    
+
+    width: 300px;
+    height: 30px;
+
+    border-radius: 0.7rem;
+
+    border-style: none;
+    box-shadow:  inset -15px 59px 10px -57px #5A5A5A;
+}
+
+#button, #submit{
+    padding-right: 18px;
+    margin-right: 10px;
+
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ABD7FF;
+    
+
+    width: 300px;
+    height: 30px;
+
+    border-radius: 0.7rem;
+
+    border-style: none;
+    box-shadow:  inset -15px 59px 10px -57px rgba(27,99,161,1);
+    cursor: grab;
+
+}

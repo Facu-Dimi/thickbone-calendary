@@ -13,8 +13,10 @@ export function Login () {
             </div>
             <div class="buttons">
                 <form action="">
-                    <input type="submit" value={"Iniciar Sesion"} id="login"/><br></br>
-                    <input type="button" value={"Registrarse"}/><br></br>
+                    <input type="submit" value={"Iniciar Sesion"} id="submit"/><br></br>
+                    <a href="/Register">
+                    <input type="button" value={"Registrarse"} id="button" /><br></br>
+                    </a>
                 </form>
             </div>
         </div>

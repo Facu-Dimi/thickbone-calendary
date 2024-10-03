@@ -48,7 +48,7 @@ body{
     margin-left: 40px;
 }
 
-.login{
+.background{
     width: 550px;
     height: 725px;
 }
@@ -59,6 +59,21 @@ body{
     width: 697px;
     height: 725px;
 }
+
+
+.login-register{
+    position: absolute;
+    width: 697px;
+    height: 725px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 65px;
+    margin-top: 40px;
+}
+
+
+
 
 @media (min-height: 773px) and (min-width: 1600px){
 

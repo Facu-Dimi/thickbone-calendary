@@ -1,5 +1,6 @@
 import "./loginpage.css"
 import React from "react";
+import { Login } from "../Login";
 
 
 export function LoginPage (){
@@ -12,9 +13,11 @@ export function LoginPage (){
             </div>
             <img  class="race" src="/img/race.jpg" alt="race"/>
 
-            <div class="login">
-                <div>
-                    <img class="fondo" src="/img/fondo-login.jpg" alt="fondo" />     
+            <div class="background">
+            <img class="fondo" src="/img/fondo-login.jpg" alt="fondo" />    
+                <div class="login-register"> 
+                    <Login/>
+
                 </div>
             </div>
         </div>
