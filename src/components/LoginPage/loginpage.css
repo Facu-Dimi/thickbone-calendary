@@ -63,8 +63,8 @@ body{
 
 .login-register{
     position: absolute;
-    width: 697px;
-    height: 725px;
+    width: 600px;
+    height: 660px;
     display: flex;
     justify-content: center;
     align-items: center;
