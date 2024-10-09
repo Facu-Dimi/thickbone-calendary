@@ -1,0 +1,89 @@
+body{
+    margin: 0px;
+    background: rgb(4,25,80);
+    background: linear-gradient(0deg, rgba(4,25,80,1) 0%, rgba(54,85,146,1) 16%, rgba(136,184,255,1) 100%);
+}
+
+.background{
+    width: 1600px;
+    height: 773px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.register{
+    padding: 10px;
+    background-color: #ffffff71;
+    opacity: 0.5;
+    width: 750px;
+    height: 500px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+
+.cargo{
+    padding: 10px;
+
+}
+
+.emp{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.data{
+    margin-left: 100px;
+
+}
+
+#nombre, #dni, #mail, #clave{
+    width: 500px;
+    margin-top: 25px;
+
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #FFFF;
+    
+
+
+    height: 30px;
+
+    border-radius: 0.7rem;
+
+    border-style: none;
+    box-shadow:  inset -15px 59px 10px -57px #5A5A5A;
+}
+
+#perfil{
+    width: 500px;
+    margin-top: 25px;
+}
+
+#button{
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ABD7FF;
+    
+
+    width: 150px;
+    height: 30px;
+
+    border-radius: 0.7rem;
+
+    border-style: none;
+    box-shadow:  inset -15px 59px 10px -57px rgba(27,99,161,1);
+    cursor: grab;
+}

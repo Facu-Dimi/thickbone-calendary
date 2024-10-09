@@ -1,9 +1,9 @@
-import './App.css';
-import { LoginPage } from './components/LoginPage';
+import { Register } from './components/Register';
+
 
 function App() {
   return (
-    <LoginPage/>
+    <Register/>
   );
 }
 
