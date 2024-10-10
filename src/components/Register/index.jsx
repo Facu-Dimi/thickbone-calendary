@@ -5,14 +5,16 @@ import React, { Component } from "react";
 class Register extends Component{
 
   state = {cargo: "", nombre: "", dni: "", mail: "", clave: "", perfil: ""}
+
+  valueToState = ({name, value}) => {
+    this.setState(state => {
+      return {[name]: value}
+    })
+  }
   
-  valueToState 
-
-
   render(){
     return (
       <div class="background">
-        <pre>{JSON.stringify(this.state)}</pre>
         <div class="register">
           <legend>¿Que eres?</legend>
           <div class="cargo">
@@ -22,6 +24,7 @@ class Register extends Component{
               type="radio"
               name="cargo"
               value={"empleado"}
+              onChange={event => this.valueToState(event.target)}
               />
             </label>
             <label  class="emp">
@@ -30,21 +33,27 @@ class Register extends Component{
               type="radio"
               name="cargo"
               value={"empleador"}
+              onChange={event => this.valueToState(event.target)}
               />
             </label>
           </div>
-          <div class="data">
-            <form action="">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo"/><br></br>
-                <input type="text" id="dni" name="dni" placeholder="DNI"/><br></br>
-                <input type="email" id="mail" name="mail" placeholder="Correo electronico"/><br></br>
-                <input type="password" id="clave" name="clave" placeholder="Contraseña"/><br></br>
+          <div class="">
+            <form action="register">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo"
+                onChange={event => this.valueToState(event.target)}/><br></br>
+                <input type="text" id="dni" name="dni" placeholder="DNI"
+                onChange={event => this.valueToState(event.target)}/><br></br>
+                <input type="email" id="mail" name="mail" placeholder="Correo electronico"
+                onChange={event => this.valueToState(event.target)}/><br></br>
+                <input type="password" id="clave" name="clave" placeholder="Contraseña"
+                onChange={event => this.valueToState(event.target)}/><br></br>
                 <label class="fot" htmlFor="">Foto de perfil:</label>
-                <input type="file" id="perfil" name="perfil"/>
+                <input type="file" id="perfil" name="perfil"
+                onChange={event => this.valueToState(event.target)}/>
             </form>
           </div>
           <form action="">
-            <input type="button" value={"Registrarse"} id="button"/><br></br>
+            <input type="button" value={"Registrarse"} id="button" onClick={() => {console.log(this.state)}}/><br></br>
           </form>
         </div>
       </div>
@@ -52,3 +61,4 @@ class Register extends Component{
   }
   }
 
+export default Register;

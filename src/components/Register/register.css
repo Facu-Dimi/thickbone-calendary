@@ -2,13 +2,14 @@ body{
     margin: 0px;
     background: rgb(4,25,80);
     background: linear-gradient(0deg, rgba(4,25,80,1) 0%, rgba(54,85,146,1) 16%, rgba(136,184,255,1) 100%);
+    background-repeat: no-repeat;
 }
 
 .background{
-    width: 1600px;
-    height: 773px;
+    width: 1000px;
+    height: 720px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
@@ -42,7 +43,8 @@ body{
 }
 
 .data{
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
 
 }
 
@@ -65,9 +67,11 @@ body{
     box-shadow:  inset -15px 59px 10px -57px #5A5A5A;
 }
 
+
+
 #perfil{
-    width: 500px;
-    margin-top: 25px;
+    margin-top: 50px;
+    margin-left: 10px;
 }
 
 #button{
@@ -87,3 +91,26 @@ body{
     box-shadow:  inset -15px 59px 10px -57px rgba(27,99,161,1);
     cursor: grab;
 }
+
+
+@media (min-height: 773px) and (min-width: 1600px){
+
+    .background{
+        width: 1600px;
+        height: 773px;
+    }
+
+    .register{
+        width: 600px;
+    }
+
+    .data{
+        margin-left: 100px;
+    
+    }
+
+
+}
+
+
+
