@@ -4,7 +4,7 @@ import React, { Component } from "react";
 
 class Register extends Component{
 
-  state = {cargo: "", nombre: "", dni: "", mail: "", clave: "", perfil: ""}
+  state = {tipo: "", nombre: "", dni: "", mail: "", clave: "", perfil: ""}
 
   valueToState = ({name, value}) => {
     this.setState(state => {
@@ -17,12 +17,12 @@ class Register extends Component{
       <div class="background">
         <div class="register">
           <legend>¿Que eres?</legend>
-          <div class="cargo">
+          <div class="tipo">
             <label class="emp">
               Empleado
               <input 
               type="radio"
-              name="cargo"
+              name="tipo"
               value={"empleado"}
               onChange={event => this.valueToState(event.target)}
               />
@@ -31,7 +31,7 @@ class Register extends Component{
               Empleador
               <input 
               type="radio"
-              name="cargo"
+              name="tipo"
               value={"empleador"}
               onChange={event => this.valueToState(event.target)}
               />
