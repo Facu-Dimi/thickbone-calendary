@@ -6,6 +6,15 @@ class Register extends Component{
 
   state = {tipo: "", nombre: "", dni: "", mail: "", clave: "", perfil: ""}
 
+  error = ''
+
+  valueToState = ({name, value}) => {
+    this.setState(state => {
+      return {[name]: value}
+    })
+  }
+
+
   async fetchUsuario(tipo){
     if (tipo === 'empleado'){
       try{
@@ -15,7 +24,7 @@ class Register extends Component{
         }
 
         const data = await response.json()
-        console.log(data)
+        return data
       }
       catch(error){
         console.log('Error al obtener los empleados!')
@@ -29,7 +38,7 @@ class Register extends Component{
           }
 
           const data = await response.json()
-          console.log(data)
+          return data
 
         }
         catch(error){
@@ -38,11 +47,22 @@ class Register extends Component{
       }
   }
 
-  valueToState = ({name, value}) => {
-    this.setState(state => {
-      return {[name]: value}
-    })
+  async checkUsuario(usuario){
+    let usersList = await this.fetchUsuario(usuario.tipo)
+    console.log(usersList)
+
+    for (let user in usersList){
+      if (usersList[user].Nombre_Completo === usuario.nombre && usersList[user].DNI === parseInt(usuario.dni)){
+        console.log(usersList[user])
+        return usersList[user]
+      }
+    }
+
+    this.error = 'Nombre y/o DNI incorrectos'
+    
   }
+
+
   
 
 
@@ -88,9 +108,10 @@ class Register extends Component{
           </div>
           <form action="">
             <input type="button" value={"Registrarse"} id="button" className={styles.button} onClick={() => {console.log(this.state)
-               this.fetchUsuario(this.state.tipo)
+               this.checkUsuario(this.state)
             }}/><br></br>
           </form>
+          <h1>{this.error}</h1>
         </div>
       </div>
     );
