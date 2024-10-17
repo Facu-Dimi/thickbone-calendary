@@ -1,4 +1,4 @@
-import "./register.css"
+import styles from "./register.module.css"
 import React, { Component } from "react";
 
 
@@ -6,19 +6,53 @@ class Register extends Component{
 
   state = {tipo: "", nombre: "", dni: "", mail: "", clave: "", perfil: ""}
 
+  async fetchUsuario(tipo){
+    if (tipo === 'empleado'){
+      try{
+        const response = await fetch('http://localhost:3001/api/empleados')
+        if (!response.ok){
+          throw new Error('Error al obtener los datos del servidor!')
+        }
+
+        const data = await response.json()
+        console.log(data)
+      }
+      catch(error){
+        console.log('Error al obtener los empleados!')
+      }
+    }
+      if(tipo === 'empleador'){
+        try{
+          const response = await fetch('http://localhost:3001/api/empleadores')
+          if (!response.ok){
+            throw new Error('Error al obtener los datos del servidor!')
+          }
+
+          const data = await response.json()
+          console.log(data)
+
+        }
+        catch(error){
+          console.log('Error al obtener los empleadores!')
+        }
+      }
+  }
+
   valueToState = ({name, value}) => {
     this.setState(state => {
       return {[name]: value}
     })
   }
   
+
+
   render(){
     return (
-      <div class="background">
-        <div class="register">
+      <div className={styles.background}>
+        <div className={styles.register}>
           <legend>¿Que eres?</legend>
-          <div class="tipo">
-            <label class="emp">
+          <div className={styles.tipo}>
+            <label className={styles.emp}>
               Empleado
               <input 
               type="radio"
@@ -27,7 +61,7 @@ class Register extends Component{
               onChange={event => this.valueToState(event.target)}
               />
             </label>
-            <label  class="emp">
+            <label  className={styles.emp}>
               Empleador
               <input 
               type="radio"
@@ -39,21 +73,23 @@ class Register extends Component{
           </div>
           <div class="">
             <form action="register">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo"
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" className={styles.inputs}
                 onChange={event => this.valueToState(event.target)}/><br></br>
-                <input type="text" id="dni" name="dni" placeholder="DNI"
+                <input type="text" id="dni" name="dni" placeholder="DNI" className={styles.inputs}
                 onChange={event => this.valueToState(event.target)}/><br></br>
-                <input type="email" id="mail" name="mail" placeholder="Correo electronico"
+                <input type="email" id="mail" name="mail" placeholder="Correo electronico" className={styles.inputs}
                 onChange={event => this.valueToState(event.target)}/><br></br>
-                <input type="password" id="clave" name="clave" placeholder="Contraseña"
+                <input type="password" id="clave" name="clave" placeholder="Contraseña" className={styles.inputs}
                 onChange={event => this.valueToState(event.target)}/><br></br>
-                <label class="fot" htmlFor="">Foto de perfil:</label>
-                <input type="file" id="perfil" name="perfil"
+                <label className={styles.fot}>Foto de perfil:</label>
+                <input type="file" id="perfil" name="perfil" className={styles.perfil}
                 onChange={event => this.valueToState(event.target)}/>
             </form>
           </div>
           <form action="">
-            <input type="button" value={"Registrarse"} id="button" onClick={() => {console.log(this.state)}}/><br></br>
+            <input type="button" value={"Registrarse"} id="button" className={styles.button} onClick={() => {console.log(this.state)
+               this.fetchUsuario(this.state.tipo)
+            }}/><br></br>
           </form>
         </div>
       </div>

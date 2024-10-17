@@ -1,21 +1,21 @@
-import "./loginpage.css"
+import styles from "./loginpage.module.css"
 import React from "react";
 import { Login } from "../Login";
 
 
-export function LoginPage (){
+export default function LoginPage (){
     return(
-        <div class="logos-login">
-            <div class="logos">
-            <img class="logo" src="/img/logo.png" alt="thickbone-logo"/>
-            <img class="logo-name" src="/img/logo-name.webp" alt="logo-name"/>
-            <img class="calendar" src="/img/calendar.png" alt="calendar"/>
+        <div className={styles.logoslogin}>
+            <div className={styles.logos}>
+            <img className={styles.logo} src="/img/logo.png" alt="thickbone-logo"/>
+            <img className={styles.logoname} src="/img/logo-name.webp" alt="logo-name"/>
+            <img className={styles.calendar} src="/img/calendar.png" alt="calendar"/>
             </div>
-            <img  class="race" src="/img/race.jpg" alt="race"/>
+            <img className={styles.race} src="/img/race.jpg" alt="race"/>
 
-            <div class="background">
-            <img class="fondo" src="/img/fondo-login.jpg" alt="fondo" />    
-                <div class="login-register"> 
+            <div className={styles.background}>
+            <img className={styles.fondo} src="/img/fondo-login.jpg" alt="fondo" />    
+                <div className={styles.loginregister}> 
                     <Login/>
 
                 </div>

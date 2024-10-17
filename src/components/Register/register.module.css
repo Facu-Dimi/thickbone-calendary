@@ -42,13 +42,8 @@ body{
     margin-left: 20px;
 }
 
-.data{
-    margin-left: 50px;
-    margin-right: 50px;
 
-}
-
-#nombre, #dni, #mail, #clave{
+.inputs{
     width: 500px;
     margin-top: 25px;
 
@@ -69,12 +64,12 @@ body{
 
 
 
-#perfil{
-    margin-top: 50px;
+.perfil{
+    margin-top: 30px;
     margin-left: 10px;
 }
 
-#button{
+.button{
     margin-top: 30px;
     font-size: 14px;
     text-align: center;
@@ -102,11 +97,6 @@ body{
 
     .register{
         width: 600px;
-    }
-
-    .data{
-        margin-left: 100px;
-    
     }
 
 
